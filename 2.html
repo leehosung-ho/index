@@ -4,51 +4,144 @@
 <title>yo22 </title>
 <meta charset="utf-8">
 
-
 <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+  background-color: black;
+   font-family: 'Bebas Neue', cursive;
+}
+
+
 a {
   color:black;
   text-decoration: none;
-}
-.saw{
-  color:gray;
-}
-#active{
-  color:red;
-}
+
+ }
 h3 {
   font-size: 80px;
+  color:white;
   text-align: center;
+  border-bottom:1px solid blue;
+  padding:60px;
+  margin:0;
+  background-image: url("image/bg.gif");
 }
+ #grid ol{
+
+  margin:0;
+  padding: 30px;
+  padding-right: 12px;
+  padding-left:23px;
+  border-right:1px solid green;
+
+
+}
+
+   #grid{
+   display: grid;
+   grid-template-columns: 150px 1fr;
+   color:white;
+ }
+
+  li {
+    font-size: 30px;
+  }
+
+  #article {
+    padding-left: 40px;
+  }
+
+
+   @media(max-width:600px){
+
+     #grid {
+    display : block;
+    border-right:none;
+  }
+  #grid ol{
+    border-right:none;
+  }
+  h3{border-bottom:none;
+  }
+
+
+ }
+
+  }
+
 </style>
 
 
 </head>
 
 <body>
-  <h1><a href="index.html"web</h1>
-  <h3>hohoho</h3>
+  <h3>WEB'S LOGIC</h3>
+
+
+<div id="grid">
+
 <ol>
-  <li><a href="1.html"class="saw">1학년 </a></li>
-  <li><a href="2.html"class="saw" id="active" >2학년 </a></li>  <!--#style이라고 써있으면css 문법적요소 태그 안에 있으면 속성 css적으로 적용 -->
-  <li><a href="3.html">3학년 </a></li>
+  <li><a href="1.html" style="color:white"; > Metaverse </a></li>
+  <li><a href="2.html" style="text-decoration:underline; color:white;"  > WEB'S LOGIC </a></li>
+  <li><a href="4.html" style="color:white";> Server internet </a></li>
 </ol>
 
-<!--
-<ol>
-  <li><a href="1.html"><font color="red">1학년</font> </a></li>
-  <li><a href="2.html"><font color="red">2학년</font> </a></li>
-  <li><a href="3.html"><font color="red">3학년</font> </a></li>
-</ol>
--->
+<div id="article">
+<h1><a href="https://www.google.com/" target="_blank" style="color:white;">Search</a></h1>
 
-
-<h2><a href="https://www.naver.com/" target="_blank">hello web</a></h2>
-iam <strong> <u>한솔</u> </strong>
+'초월한', '그 이상의'라는 뜻의 '메타(meta)'와 '세계'라는 뜻의
+'유니버스(universe)'를 조합한 말로 '현실을 초월하여 만들어낸 세계',
+'현실과 가상이 혼재된 세계'라는 의미이다. 일반적으로 가상과 현실이 상호작용을 하며
+다양한 사회·경제·문화 활동이 벌어지는 세상으로 정의된다. 또 VR(가상현실)·AR(증강현실)과 같은 가상융합기술(XR)이 활용되는 확장가상세계로 정의하기도 한다.
+이 용어는 1992년 발표된 미국의 공상과학 소설가 닐 스티븐슨의 소설 ≪스노 크래시 Snow Crash≫에서 처음 등장하였는데,
+소설에서 현실과 가상세계를 오가는 주인공 피자배달원이 아바타로 구현되어 전사이자 영웅으로 활약하는 가상세계를 '메타버스'라 불렀다.
+<strong> <u>!!!!!</u> </strong>
 
 <p>This is a paragraph.</p>
+</div>
+</div>
+
+
 <p>This is another paragraph.</p>
 
-<img src="wow.jpg" width="100%">
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://web-1-zwfuyzxlpw.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</p>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/612f603c649e0a0a5cd406ab/1feggvra1';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+
+
 </body>
 </html>
