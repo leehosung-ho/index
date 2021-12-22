@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+<title>autonomous driving</title>
+<meta charset="utf-8">
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+  background-color: black;
+
+}
+
+
+a {
+  color:black;
+  text-decoration: none;
+
+ }
+h3 {
+  font-size: 80px;
+  color:black;
+  text-align: center;
+  border-bottom:1px solid blue;
+  padding:60px;
+  margin:0;
+  background-image: url("SLAMM.jfif");
+}
+ #grid ol{
+
+  margin:0;
+  padding: 30px;
+  padding-right: 0px;
+  padding-left:23px;
+  border-right:1px solid green;
+  width:190px;
+
+
+}
+
+   #grid{
+   display: grid;
+   grid-template-columns: 150px 1fr;
+   color:white;
+ }
+
+  li {
+    font-size: 30px;
+  }
+
+  #article {
+    padding-left: 80px;
+  }
+
+
+   @media(max-width:600px){
+
+     #grid {
+    display : block;
+    border-right:none;
+  }
+  #grid ol{
+    border-right:none;
+  }
+  h3{border-bottom:none;
+  }
+
+
+ }
+
+  }
+
+</style>
+
+
+</head>
+
+<body>
+  <h3>Visual SLAM</h3>
+    <a href="index.html";><font color="white">home</font></a>
+    <br>
+    <a href="chat.html";><font color="white">chat</font></a>
+
+
+<div id="grid">
+
+
+<ol>
+  <li><a href="1.html" style="color:white"; > 자율주행이란? </a></li>
+  <li><a href="1ALPHA.html" style="text-decoration:underline; color:white"; > SLAM  </a></li>
+  <li><a href="2.html" style="color:white;"  > 테슬라의 모델 </a></li>
+  <li><a href="4.html" style="color:white";> 윤리적 문제 </a></li>
+</ol>
+
+<div id="article">
+<h1><a href="https://www.google.com/" target="_blank" style="color:white;">Search</a></h1>
+<strong><font size="10" color="yellow">What is SLAM?</strong></font>
+<P>SLAM이란 (Simultaneous Localization and Mapping)의 약자로 한국어로 동시적 위치추정 및 지도작성이라는 뜻입니다. 쉽게 말해
+SLAM은 자율주행자동차에 적용되어서 주변환경 지도를 작성함과 동시에 차량의 위치를 작성한 지도에 표시하는 기술입니다. 본 기술은 1990년대부터 꾸준히 연구되고 있으며 컴퓨터 처리 속도가
+개선되고 카메라와 라이다 등의 센서 기술이 발전함에 따라 실제 많은 분야에 응용되고 있습니다. </P>
+<font size="10" color="yellow"><strong>사용 동향</strong> </font>
+<p>카메라를 이용하여 SLAM을 수행할 경우 시간이 지남에 따라서 오차가 누적되므로 최종
+생성된 지도와 위치 추정의 오차가 매우 커지는 경우가 있다. 오차가 발생하는 원인은 주변
+환경과 조도 변화에 따라서 센서 관측치(observation)에 대한 노이즈 또는 모호성(ambiguity)
+이 존재하기 때문이다. 이러한 문제점을 극복하기 위한 Visual SLAM 기술은 크게 기하하적
+방법, 학습을 이용한 방법 그리고 학습과 기하학적 방법을 융합한 하이브리드 방법으로 나눌
+수 있다.</p>
+<font size="10" color="yellow"><strong> 딥러닝 기반 Visual SLAM 방법론 </strong> </font>
+<p>딥러닝 기반의 SLAM 기술들은 크게 오도메트리(odometry) 추정과 매핑(mapping)으로
+분류된다
+<li>1.오도메트리</li>
+딥러닝 기반의 오도메트리 추정 기술은 지도 학습과 비지도 학습으로 분류된다. 지도 학습
+은 연속적인 영상과 그에 대응하는 카메라 자세 변화에 대한 학습데이터가 존재하는 경우
+입력 영상에 대한 자세 변화의 출력을 제공하는 종단간(end-to-end) 딥러닝 기술이다.
+지도 학습 기반의 방법으로 영상에서 특징 정보를 추출하기 위한 CNN(Convolutional
+Neural Network)과 순차적 자세 변화 추정을 위한 RCNN(Recurrent Convolutional
+Neural Network)을 이용하여 입력 영상 시퀀스에 대한 카메라 자세를 출력하는 기술이
+제안되었다비지도 학습 기반의 방법은 주어진 영상 시퀀스에 대한 자세 학습데이터가
+없는 경우 뎁스 정보를 추출하고 자세 변화를 추정하기 위한 딥러닝 기술로서 계산된 자세
+변화와 뎁스로부터 다른 시점의 영상을 합성하여 그 시점의 실영상과 비교를 통해 손실함수
+를 정의하고 학습한다
+<li>2.매핑</li>
+매핑은 센서 데이터를 이용하여 주변 환경에 대한 3차원 형상 또는 구조를 표현하는 기술
+로서 지도를 구성하는 기본 요소에 따라서 뎁스(depth), 포인트(point), 메쉬(mesh), 복셀
+(voxel) 등으로 나뉜다. 영상정보로부터 거리를 획득하는 방법은 양안 영상을 사용하거나
+영상 시퀀스를 이용한 방법이 일반적이었으나 최근 단안 영상으로부터 뎁스 정보를 추출할
+수 있는 딥러닝 기술이 활발히 연구되고 있다.
+</p>
+
+<font size="10" color="yellow"><strong> SLAM 기술 사용 사례 </strong> </font>
+<P>
+1.카토그래퍼(Cartographer)</p>
+<p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DM0dpHLhtX0" title="YouTube video player" frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></P>
+<P>
+2.네이버랩스 정밀지도</p>
+<p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4UXW3qhzRR8" title="YouTube video player" frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</P>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<font size="10"color="yellow">총 정리 영상</font>
+<P>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QKg5lF_NtC4" title="YouTube video player" frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></P>
+<p><font size="10" color="yellow"> 느낀 점</font>
+</p>
+<p>Visual SLAM 기술은 AR/VR을 위한 콘텐츠 생성 및 지능형 로봇 또는 자동차의 자율
+주행 등 다양한 분야에 적용되는 핵심 기술이다. 하지만 카메라와 환경 조건으로부터 야기되
+는 다양한 문제들로 인한 오차가 우리가 앞으로 해결해야할 문제점이다. 이를 해결하기 위해선 딥러닝과 성능이 좋은 하드웨어와 접목시켜서 실시간으로 slam기술을
+적용시켜나가야 한다고 느꼈다.
+</p>
+
+
+
+
+</div>
+</div>
+
+
+
+
+</body>
+</html>
