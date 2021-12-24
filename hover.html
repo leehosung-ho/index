@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>driving</title>
+    <style>
+    h1{
+      text-align: center;
+      color:blue;
+      font-size: 80px;
+      text-decoration:none;
+
+    }
+
+
+    .container {
+  display: flex;
+  width: 100%;
+  padding: 4% 2%;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+.box {
+  flex: 1;
+  overflow: hidden;
+  transition: .5s;
+  margin: 0 2%;
+  box-shadow: 0 20px 30px rgba(0,0,0,.1);
+  line-height: 0;
+}
+
+.box > img {
+  width: 200%;
+  height: calc(100% - 10vh);
+  object-fit: cover;
+  transition: .5s;
+}
+
+.box > span {
+  font-size: 3.8vh;
+  display: block;
+  text-align: center;
+  height: 10vh;
+  line-height: 2.6;
+}
+
+.box:hover { flex: 1 1 50%; }
+.box:hover > img {
+  width: 100%;
+  height: 100%;
+}
+ </style>
+
+  </head>
+  <body>
+    <a href="index.html";><h1>HOME</h1></a>
+    
+    <div class="container">
+  <a href="1.html";>
+    <div class="box">
+    <img src="bakc.png">
+    <span>자율주행</span>
+  </div></a>
+  <a href="1ALPHA.html";><div class="box">
+    <img src="SLAMM.jfif">
+    <span>SLAM</span>
+  </div></a>
+  <a href="2.html";><div class="box">
+    <img src="tesla.jpg">
+    <span>테슬라</span>
+  </div></a>
+  <a href="4.html";><div class="box">
+    <img src="unri.jfif">
+    <span>윤리적 문제</span>
+  </div></a>
+</div>
+  </body>
+</html>
